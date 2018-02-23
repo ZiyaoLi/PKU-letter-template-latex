@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+
+\providecommand\PKUtoname{To Someone}
+\providecommand\PKUtoaddress{To Address\\Goes Here}
+
+
+% Measurements are taken directly from the guide
+\usepackage[top=1in,left=0.75in,bottom=1in,right=0.75in]{geometry}
+\usepackage{graphicx}
+\usepackage[colorlinks=false,
+            pdfborder={0 0 0},
+            ]{hyperref}
+\usepackage[absolute]{textpos}
+\usepackage{ifthen}
+\usepackage{soul}
+
+%
+%% --- For placement of the horizontal line
+%\usepackage{tikz}
+%\usetikzlibrary{calc}
+
+% --- A nice serif font (palatino), but not the prescribed nonfree ITC stone
+% \usepackage[sc,osf]{mathpazo}
+% \linespread{1.05}
+
+% Remove paragraph indentation
+\parindent0pt
+\setlength{\parskip}{0.8\baselineskip}
+\raggedright
+\pagestyle{empty}
+% Ensure consistency in the footer
+\urlstyle{sf}
+
+\providecommand\PKUfromname{Guojie Song}
+\providecommand\PKUfromtitle{Associate Professor}
+\providecommand\PKUfromdegree{Ph.D.}
+\providecommand\PKUfromdepartment{Center for Information Science}
+\providecommand\PKUfromcollege{School of Electronics Engineering \\ and Computer Science}
+\providecommand\PKUfromuniversity{Peking University}
+\providecommand\PKUfromaddress{}
+\providecommand\PKUfromtel{Tel:86-10-62754785}
+\providecommand\PKUfromtel{Fax:}
+\providecommand\PKUfromemail{\url{gjsong@pku.edu.cn}}
+\providecommand\PKUfromweb{\url{http://www.website.edu}}
+
+\providecommand\PKUtoname{PKUtoname}
+\providecommand\PKUtoaddress{PKUtoaddress}
+\providecommand\PKUdate{\vspace{4.5cm}\today}
+\providecommand\PKUopening{To whom it may concern,}
+\providecommand\PKUclosing{Sincerely}
+% Update this and the next line to the correct path
+\providecommand\PKUsignaturefile{sign}
+\providecommand\PKUlogofile{logo}
+\providecommand\PKUenclosure{}
+
+%\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%\renewcommand{\footrulewidth}{0pt}
+\fancyfoot{}
+%\fancyfoot[R]{{\footnotesize p. \thepage}}%\ of \pageref*{LastPage}}} %uncomment this for page numbers
+
+
+% \fancyfoot[L]{%
+%     {\footnotesize\color{PKUgray}\sffamily
+%     \PKUfromaddress\\[-0.1\baselineskip]
+%     \PKUfromtel\ \textbullet\ Fax: \PKUfromfax\ \textbullet\ \PKUfromemail\ \textbullet\ \PKUfromweb}\color{black}}
+
+\fancypagestyle{cover}{
+\fancyhead[L]{\fontsize{10}{12} \selectfont%
+    \begin{textblock*}{2.5in}[0.365,0.10](1.5in,1.4in)
+            \includegraphics[width=1.5in]{\PKUlogofile}
+    \end{textblock*}
+    \begin{textblock*}{5.375in}(2.4in,1.4in)   % 6.375=8.5 - 1.5 - 0.625
+        \textbf{\Large{\PKUfromname}}\vspace{0.2cm}\\
+        \PKUfromdegree\\
+        \PKUfromtitle
+    \end{textblock*}
+    \begin{textblock*}{5.375in}(4.2in,1.4in)   % 6.375=8.5 - 1.5 - 0.625
+        \PKUfromdepartment\\
+        \PKUfromcollege\\
+        \PKUfromuniversity
+    \end{textblock*}
+    \begin{textblock*}{5.375in}(6.6in,1.4in)   % 6.375=8.5 - 1.5 - 0.625
+        \PKUfromtel\\
+        \PKUfromemail
+    \end{textblock*}
+    }
+}
+
+\renewcommand{\headrulewidth}{0pt}
+
+\AtBeginDocument{
+    \thispagestyle{cover}
+    % Text lines should be less than 6in long
+    \ \\
+    \PKUdate
+    \bigskip
+
+    %\PKUtoname\ifthenelse{\equal{\PKUtoname}{}}{}{\\}
+    %\PKUtoaddress
+    %\bigskip
+
+    \PKUopening\par
+    }
+
+
+\AtEndDocument{
+\centering
+    \par\vspace{2ex}
+    \PKUclosing,
+
+    \ifthenelse{\equal{\PKUsignaturefile}{}}
+    {\bigskip\bigskip}
+    {\includegraphics[width=2.0in]{\PKUsignaturefile}\\[-0.2\baselineskip]}
+
+    \PKUfromname \\
+    \PKUenclosure
+}
+
+\begin{document}
+
+I am writing this letter to give my recommendation for Ziyao Li, a junior student currently working in my laboratory. I have known him for over one year and I believe he is as competent as most of the graduate students in the academic field.
+
+The first time I knew Ziyao was on my course of \textit{Data Structures and Algorithms}, which he took in his second year. The course was difficult for students of his grade in terms of the mathematical basis and programming skills required. However, Ziyao did a great job in the course. He behaved very actively in class and completed excellent coursework, achieving top scores among more than one hundred fellow students. He often came up with good questions and put forward several original opinions. After this course, I invited this young man to work in my laboratory.
+
+Ziyao immediately showed his potentials in doing researches. He was always the one coming up with novel ideas and perspectives in group meetings. He was curious to learn new knowledge and was always persistent and hardworking. Although at that time he had never learnt about popular algorithms in NLP areas before, he mastered most of them in less than a month. This requires much efforts for Peking University undergraduates, especially those studying for double degrees, as they usually take more than 9 courses a semester. He then came up with a novel model for entity canonicalization using attentional techniques adapted from machine translation field.
+
+In addition to working for his own assignments, Ziyao was always willing to offer help in other programs. Ziyao was extraordinarily helpful once when some of my graduate students came across awkward results from their highway traffic model. He pointed out the potential problems of the model’s basic assumptions with his extensive knowledge of geology and economics, and furthermore provided detailed suggestions for the improvement of the model. His suggestions finally solved the problems. His brilliant English was also a valuable asset. He voluntarily made significant while silent contributions in revising our AAAI 2018 Conference paper.
+
+Besides his outstanding study abilities among his peers, it is his mathematical knowledge background that distinguishes him from common computer science (CS) students. Ziyao takes massive mathematics courses, and is especially excellent in statistics and algebra. These help him analyze academic problems from a deeper view. Some of his ideas originate from a combination of matrices and probability theories, which are uncommonly seen from CS students. Consequently, Ziyao is probably not as experienced in coding as some of the best CS students who have taken OI (Olympiad in Informatics) trainings in their high schools, but his programming techniques are reasonably good, more than enough for researches.
+
+Ziyao is easygoing in communicating with others. Despite facing the considerable pressure from schoolwork of his double degree, he always finishes all his assignments successfully without complaint. His curiosity and hunger for self-development make him consistently ready to make progress. He is now individually carrying a project in my group about proposing new methods for canonicalizing diagnosis mentions from authentic EMR documents leveraging both text and context information. It is definitely a challenging project for a junior student. However, so far he has made several breakthroughs, and I believe he will succeed in the near future.
+
+In summary, I highly recommend Ziyao for research work. I am confident that he will make a great asset in any research programs with his excellent study abilities, academic experiences and personalities.
+
+\end{document}
